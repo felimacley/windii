@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quieres ser mi novia?</title>
+    <title>¿Quieres ser mi San Valentín?</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
         
@@ -88,8 +88,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>¿Quieres ser mi novia?</h1>
-        <p>Este es un momento especial, y quiero compartirlo contigo.</p>
+        <h1 id="titulo">¿Quieres ser mi San Valentín?</h1>
+        <p id="texto">Este es un momento especial, y quiero compartirlo contigo.</p>
         <div class="imagen">
             <img src="https://img.freepik.com/vector-premium/novio-lindo-novia-casan-idea-estilo-doodle-historieta-gato-gatito-boda-tarjeta-invitacion-boda_44161-791.jpg?w=740" alt="Gatitos enamorados">
         </div>
@@ -104,8 +104,12 @@
         const btnSi = document.getElementById('btnSi');
         const btnNo = document.getElementById('btnNo');
         const mensaje = document.getElementById('mensaje');
+        const titulo = document.getElementById('titulo');
+        const texto = document.getElementById('texto');
 
         btnSi.addEventListener('click', () => {
+            titulo.textContent = "¿Quieres ser mi novia?";
+            texto.textContent = "Esta fecha espero sea especial para ambos 💛";
             mensaje.textContent = "Este día será recordado por siempre, porque hoy comienza una historia que espero sea infinita. 💖";
             btnNo.style.display = "none";
         });
@@ -121,3 +125,4 @@
     </script>
 </body>
 </html>
+
