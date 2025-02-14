@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        
+        body {
+            font-family: 'Pacifico', cursive;
+            background-image: url('https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 223, 186, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .imagen img {
+            width: 150px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        #btnSi {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        #btnSi:hover {
+            background-color: #45a049;
+        }
+
+        #btnNo {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #e91e63;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi novia?</h1>
+        <p>Este es un momento especial, y quiero compartirlo contigo.</p>
+        <div class="imagen">
+            <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt="Muñeco saludando">
+        </div>
+        <div class="buttons">
+            <button id="btnSi">¡Sí!</button>
+            <button id="btnNo">No</button>
+        </div>
+        <p id="mensaje"></p>
+    </div>
+
+    <script>
+        const btnSi = document.getElementById('btnSi');
+        const btnNo = document.getElementById('btnNo');
+        const mensaje = document.getElementById('mensaje');
+
+        btnSi.addEventListener('click', () => {
+            mensaje.textContent = "Este día será recordado por siempre, porque hoy comienza una historia que espero sea infinita. 💖";
+            btnNo.style.display = "none";
+        });
+
+        btnNo.addEventListener('mouseover', () => {
+            const maxX = window.innerWidth - btnNo.clientWidth - 20;
+            const maxY = window.innerHeight - btnNo.clientHeight - 20;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+            btnNo.style.left = `${randomX}px`;
+            btnNo.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>
